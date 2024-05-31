@@ -97,19 +97,20 @@ function Nav() {
       </div>
       {/* extra section on navber */}
       <div className="flex  justify-start pl-2 items-center w-full h-10 bg-slate-800 gap-4 md:text-white ">
-        <div className="hidden md:flex justify-start pl-8 items-center w-full h-10 bg-slate-800 gap-4 text-white  ">
+        <div className="flex justify-start pl-8 items-center w-full h-10 bg-slate-800 gap-4 text-white  ">
           <Link to="/products">
             <div className="flex items-center gap-2q size-12">
               <IoMenu className="size-12 " />
               <p>All</p>
             </div>
           </Link>
-
+        <div className="hidden md:flex justify-start  items-center w-full h-10 bg-slate-800 gap-4 text-white ">
           <p>Today's Delals</p>
           <p>Customer Service</p>
           <p>Registry</p>
           <p>GiftCards</p>
           <p>Sell</p>
+          </div>
         </div>
       </div>
     </>

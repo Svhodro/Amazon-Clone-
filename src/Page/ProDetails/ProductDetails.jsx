@@ -75,12 +75,12 @@ function ProductDetails() {
 
               <div className="mb-4">
                 <div className="join ">
-                  <button className="join-item btn bg-slate-300 text-black" onClick={handleplus} >
-                  <FaPlus />
+                <button className="join-item btn bg-slate-300 text-black" onClick={handleminus} >
+                  <LuMinus />
                   </button>
                   <button className="join-item btn bg-slate-300 text-black">{quantity}</button>
-                  <button className="join-item btn bg-slate-300 text-black" onClick={handleminus} >
-                  <LuMinus />
+                 <button className="join-item btn bg-slate-300 text-black" onClick={handleplus} >
+                  <FaPlus />
                   </button>
                 </div>
               </div>
