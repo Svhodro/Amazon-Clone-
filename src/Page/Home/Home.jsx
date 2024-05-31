@@ -15,10 +15,13 @@ function Home() {
   })
   return (
 
-    <div className='w-full bg-slate-900' >
+    <div className='w-full bg-slate-900  ' >
       <Homebanner />
+      <div className='flex flex-col gap-2'>
       <Category />
       <Banner />
+      </div>
+      
       </div>
      
    
