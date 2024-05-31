@@ -96,7 +96,7 @@ function Nav() {
         </button>
       </div>
       {/* extra section on navber */}
-      <div className="flex  justify-start pl-8 items-center w-full h-10 bg-slate-800 gap-4 md:text-white ">
+      <div className="flex  justify-start pl-2 items-center w-full h-10 bg-slate-800 gap-4 md:text-white ">
         <div className="hidden md:flex justify-start pl-8 items-center w-full h-10 bg-slate-800 gap-4 text-white  ">
           <Link to="/products">
             <div className="flex items-center gap-2q size-12">
