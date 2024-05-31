@@ -36,7 +36,7 @@ const handleBook=()=>{
             <div >
                 <div className='flex justify-center w-full gap-3 px-4'>
                     {/* 1st-card */}
-                    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-950" onClick={handleWoman}>
+                    <div className="rounded overflow-hidden shadow-lg bg-gray-950" onClick={handleWoman}>
 
                         {/* effect */}
                         <div className="group flex justify-center text-center relative overflow-hidden rounded-md cursor-pointer">
@@ -59,7 +59,7 @@ const handleBook=()=>{
                         </div>
                     </div>
                     {/* 2st-card */}
-                    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-950" onClick={handleMan}>
+                    <div className=" rounded overflow-hidden shadow-lg bg-gray-950" onClick={handleMan}>
                         {/* effect */}
                         <div className="group flex justify-center text-center relative overflow-hidden rounded-md cursor-pointer">
 
@@ -83,9 +83,9 @@ const handleBook=()=>{
 
                     </div>
                 </div>
-                <div className='flex justify-center w-full  md:flex-row sm:p-4 gap-2 items-center px-4 '>
+                <div className='flex justify-center w-full   md:flex-row sm:p-4 gap-2 items-center px-4 my-4'>
                     {/* 1st-card */}
-                    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-950" onClick={handleBook}>
+                    <div className=" rounded overflow-hidden shadow-lg bg-gray-950" onClick={handleBook}>
 
                         {/* effect */}
                         <div className="group flex justify-center text-center relative overflow-hidden rounded-md cursor-pointer">
@@ -111,7 +111,7 @@ const handleBook=()=>{
 
                     </div>
                     {/* 2st-card */}
-                    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-950" onClick={handleKid}>
+                    <div className="rounded overflow-hidden shadow-lg bg-gray-950" onClick={handleKid}>
 
                         {/* effect */}
                         <div className="group flex justify-center text-center relative overflow-hidden rounded-md cursor-pointer">
@@ -131,13 +131,13 @@ const handleBook=()=>{
                         </div>
 
                         <div className="px-6 sm:py-4 my-4" >
-                            <div className="font-bold text-base sm:text-xl ">Kid's Collection</div>
+                            <div className="font-bold text-base sm:text-xl ">Kid's </div>
 
                         </div>
 
                     </div>
                     {/* 3st-card */}
-                    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-950" onClick={handleTopsale} >
+                    <div className="q rounded overflow-hidden shadow-lg bg-gray-950" onClick={handleTopsale} >
                         {/* effect */}
                         <div className="group flex justify-center text-center relative overflow-hidden rounded-md cursor-pointer ">
 
@@ -156,7 +156,7 @@ const handleBook=()=>{
 
                         </div>
                         <div className="px-6 sm:py-4 my-4" >
-                            <div className="font-bold text-base sm:text-xl ">Top Collection </div>
+                            <div className="font-bold text-base sm:text-xl ">Top  </div>
 
                         </div>
 
