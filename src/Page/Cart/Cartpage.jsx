@@ -8,7 +8,7 @@ function Cartpage() {
     const [userData, setuserData] = useState([])
     const [total, settotal] = useState(0)
     useEffect(() => {
-        axios.get('https://amazon-clone-backend-roan.vercel.app/usercart')
+        axios.get('https://amazon-backend-main.vercel.app/usercart')
             .then(res => {
                 setHidden('hidden')
                 setData(res.data)

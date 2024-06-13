@@ -10,7 +10,7 @@ function Product() {
     const navigate=useNavigate()
     const{setdetails}=useContext(UserContext)
     useEffect(() => {
-        axios.get('https://amazon-clone-backend-roan.vercel.app/Category')
+        axios.get('https://amazon-backend-main.vercel.app/Category')
             .then(res => {
                 setHidden('hidden')
                 setData(res.data)
@@ -27,108 +27,9 @@ function Product() {
     return (
         <div className='bg-slate-800 w-full'>
             <div className='px-10 text-lg font-bold py-4'>All product</div>
-            <div>
-                <div className="drawer ">
-                    <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-                    <div className="drawer-content">
-                        {/* Page content here */}
-                        <label htmlFor="my-drawer" className="btn  drawer-button ml-7 bg-black">Fillter</label>
-                    </div>
-                    <div className="drawer-side ">
-                        <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-                        <section className='bg-white text-black w-3/4 md:w-2/4  h-screen flex justify-start pl-6 pt-20 items-start flex-col'>
-                            <h1 className='text-xl font-bold text-left '>Filter</h1>
-                            <hr className='w-4/5 border-2 border-slate-700 my-6 ' />
-                            <div className='w-full flex flex-col justify-center gap-4 '>
-
-
-                                <div className='flex gap'>
-                                    <input
-                                        type="radio"
-                                        name="topping"
-                                        value="woman"
-                                        id="woman"
-                                        checked={topping === "woman"}
-                                        onChange={onOptionChange}
-                                    />
-                                    <label htmlFor="woman">Woman</label>
-                                </div>
-                                <div className='flex gap'>
-                                    <input
-                                        type="radio"
-                                        name="topping"
-                                        value="man"
-                                        id="man"
-                                        checked={topping === "man"}
-                                        onChange={onOptionChange}
-                                    />
-                                    <label htmlFor="man">Man</label>
-                                </div>
-                                <div className='flex gap'>
-                                    <input
-                                        type="radio"
-                                        name="topping"
-                                        value="kid"
-                                        id="kid"
-                                        checked={topping === "kid"}
-                                        onChange={onOptionChange}
-                                    />
-                                    <label htmlFor="kid">kid</label>
-                                </div>
-                                <div className='flex gap'>
-                                    <input
-                                        type="radio"
-                                        name="topping"
-                                        value="plant"
-                                        id="plant"
-                                        checked={topping === "plant"}
-                                        onChange={onOptionChange}
-                                    />
-                                    <label htmlFor="plant">Plant</label>
-                                </div>
-                                <div className='flex gap'>
-                                    <input
-                                        type="radio"
-                                        name="topping"
-                                        value="book"
-                                        id="book"
-                                        checked={topping === "book"}
-                                        onChange={onOptionChange}
-                                    />
-                                    <label htmlFor="book">Book</label>
-                                </div>
-                                <div className='flex gap'>
-                                    <input
-                                        type="radio"
-                                        name="topping"
-                                        value="topsale"
-                                        id="topsale"
-                                        checked={topping === "topsale"}
-                                        onChange={onOptionChange}
-                                    />
-                                    <label htmlFor="topsale">Topsale</label>
-                                </div>
-
-2
-
-
-
-
-
-
-                            </div>
-                            <div>
-                                <h1 className='text-xl font-bold text-left'>Category</h1>
-
-                            </div>
-                            <div>
-                                <h1 className='text-xl font-bold text-left'>Price</h1>
-
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
+         <div>
+            
+         </div>
             <div className='w-full flex justify-center items-center flex-wrap  gap-4 sm:gap-6'>
                 {/*   ✅ Product card 1 - Starts Here 👇 */}
                 {data.map(res => {
@@ -166,7 +67,7 @@ function Product() {
 
 
 
-                </div>
+            </div>
             {/* next section */}
 
             <div className={`w-full h-screen flex justify-center items-center ${hidden}`} >

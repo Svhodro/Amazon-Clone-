@@ -18,7 +18,7 @@ function ProductDetails() {
       user: userData.email,
     };
 
-    axios.post("https://amazon-clone-backend-roan.vercel.app/addcard", data);
+    axios.post("https://amazon-backend-main.vercel.app/addcard", data);
   };
 
   const [quantity,setQuantity]=useState(0)
