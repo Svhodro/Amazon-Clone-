@@ -10,7 +10,7 @@ function Product() {
     const navigate=useNavigate()
     const{setdetails}=useContext(UserContext)
     useEffect(() => {
-        axios.get('https://amazon-backend-main.vercel.app/Category')
+        axios.get('https://fakestoreapi.com/products')
             .then(res => {
                 setHidden('hidden')
                 setData(res.data)
@@ -40,11 +40,11 @@ function Product() {
                     }
 
 
-                    return <div className="w-48 sm:w-72 bg-white shadow-md  duration-500 hover:scale-105 hover:shadow-xl my-2" onClick={handleDetails}>
+                    return <div className="w-48 sm:w-72 p-6  bg-white shadow-md  duration-500 hover:scale-105 hover:shadow-xl my-2" onClick={handleDetails}>
                         <a href="#">
                             <img
                                 src={res.image}
-                                className="h-40 sm:h-60 w-full object-cover "
+                                className="h-30 sm:h-60 w-full object-cover "
                             />
                             <div className="px-4 py-3 w-full">
                                 <p className="text-lg font-bold text-black truncate block capitalize">
@@ -52,7 +52,7 @@ function Product() {
                                 </p>
                                 <div className="flex items-center">
                                     <p className="text-lg font-semibold text-black cursor-auto my-3">
-                                        {res.price}
+                                       ${res.price}
                                     </p>                                  
                                 </div>
                             </div>

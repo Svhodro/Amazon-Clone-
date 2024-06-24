@@ -7,9 +7,11 @@ import { FiSearch } from "react-icons/fi";
 import { BiSolidCartAlt } from "react-icons/bi";
 import { Link, useNavigate } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
+import { CartContext } from "../../../context/CartContext";
 
 function Nav() {
   const navigate = useNavigate();
+  const {cartAmount}=useContext(CartContext)
   //     // item
   //     const [contry, setContry] = useState()
   //     useEffect(() => {
@@ -78,7 +80,7 @@ function Nav() {
                 <BiSolidCartAlt className="size-8" />
               </Link>
             </p>
-            <p className="text-xl font-bold">0</p>
+            <p className="text-xl font-bold">{cartAmount}</p>
           </div>
         </div>
       </div>
