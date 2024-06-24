@@ -1,17 +1,18 @@
 import React, { useState, useEffect, useContext } from "react";
-// import { FaShoppingCart } from "react-icons/fa";
 import logo from "/amazon.png";
 import { FiSearch } from "react-icons/fi";
-// import { FaMapLocationDot } from "react-icons/fa6";
-// import UserContext from '../../../context/UserContext';
+
 import { BiSolidCartAlt } from "react-icons/bi";
 import { Link, useNavigate } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import { CartContext } from "../../../context/CartContext";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import app from "../../../firebase/firebase";
 
 function Nav() {
   const navigate = useNavigate();
-  const {cartAmount}=useContext(CartContext)
+  const { cartAmount } = useContext(CartContext);
+
   //     // item
   //     const [contry, setContry] = useState()
   //     useEffect(() => {
@@ -28,6 +29,14 @@ function Nav() {
   const vare = JSON.parse(localStorage.getItem("userdata"));
 
   const handleLogout = () => {
+    const auth = getAuth(app);
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+      })
+      .catch((error) => {
+        // An error happened.
+      });
     localStorage.clear();
     navigate("/");
   };
@@ -106,12 +115,12 @@ function Nav() {
               <p>All</p>
             </div>
           </Link>
-        <div className="hidden md:flex justify-start  items-center w-full h-10 bg-slate-800 gap-4 text-white ">
-          <p>Today's Delals</p>
-          <p>Customer Service</p>
-          <p>Registry</p>
-          <p>GiftCards</p>
-          <p>Sell</p>
+          <div className="hidden md:flex justify-start  items-center w-full h-10 bg-slate-800 gap-4 text-white ">
+            <p>Today's Delals</p>
+            <p>Customer Service</p>
+            <p>Registry</p>
+            <p>GiftCards</p>
+            <p>Sell</p>
           </div>
         </div>
       </div>
