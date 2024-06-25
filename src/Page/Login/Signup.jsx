@@ -1,12 +1,10 @@
-import React, { useState, useContext } from "react";
-import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState} from "react";
+import {  Link, useNavigate } from "react-router-dom";
 import img from "../../assets/Login.png";
-import { getAuth, createUserWithEmailAndPassword ,onAuthStateChanged } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import app from "../../firebase/firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import UserContext from "../../context/UserContext";
+import swal from 'sweetalert'
+
 function Signup() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -33,7 +31,7 @@ function Signup() {
         // Signed up
         const user = userCredential.user;
         localStorage.setItem('userData',JSON.stringify(user))
-
+        swal("Registerd!", "Go to Login!", "success");
         // ...
       })
       .catch((error) => {
@@ -44,26 +42,7 @@ function Signup() {
   };
 
   // login function
-  const handlelogin = (e) => {
-    e.preventDefault();
-    const auth = getAuth(app);
-    signInWithEmailAndPassword(auth, email, Pass)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-
-        localStorage.setItem("userdata", JSON.stringify(user));
-
-        // ...
-        navigate("/");
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      });
-
- 
-  };
+  
 
   return (
     <div className="bg-white">
@@ -73,7 +52,7 @@ function Signup() {
             <img src={img} alt="" className="w-40" />
           </div>
           <form className="card-body rounded-none">
-            <h1 className="text-2xl font-bold text-black">SignIn</h1>
+            <div  className="text-2xl font-bold text-black w-full  text-center">Signup</div>
             <div className="form-control rounded-none">
               <label className="label">
                 <span className="label-text text-black">Email</span>
@@ -102,21 +81,16 @@ function Signup() {
               <button
                 className="btn bg-orange-400 border-none text-black hover:text-white"
                 onClick={(e) => {
-                  handlelogin(e);
-                }}
-              >
-                Login
-              </button>
-            </div>
-            <div className="w-full ">
-              <button
-                className="btn bg-transparent border-none text-black hover:text-white w-full "
-                onClick={(e) => {
                   handleCreateAccount(e);
                 }}
               >
-                Create your Amazon Account
+                Signup
               </button>
+            </div>
+            <div className="w-full text-black text-center py-3  text-base font-semibold hover:underline " >
+            <Link to='/Login'>
+            already have an account login
+            </Link>
             </div>
           </form>
         </div>

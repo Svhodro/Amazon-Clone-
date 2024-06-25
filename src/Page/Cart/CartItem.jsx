@@ -9,22 +9,20 @@ const CartItem = ({ product }) => {
   const { id, title, image, price, amount } = product;
  const {removecart,handleplus,handleminus}= useContext(CartContext)
   return (
-    <div className="flex ">
+    <div className="flex bg-white rounded-lg p-3">
       <div className="w-full min-h-[150px] flex items-center gap-x-4 ">
         {/* image div  */}
         <div>
-          <Link to={`/product/${id}`}>
+         
             <img src={image} className="max-w-[80px]" alt="img" />
-          </Link>
+        
         </div>
         {/* text and other */}
         <div  className=" w-full">
           {/* title there */}
-        <div className="flex justify-between items-center w-full px-1">
-          <Link to={`/product/${id}`}>
-            <h1 className="text-base sm:text-sm uppercase hover:underline">{title}</h1>
-          </Link>
-          {/* close button */}
+        <div className="flex justify-between items-center w-full px-1">        
+            <h1 className="text-xl text-black  sm:text-sm uppercase ">{title}</h1>
+           {/* close button */}
            <div onClick={()=>removecart(id)}>
            <IoIosClose  className="text-2xl cursor-pointer hover:text-red-600 hover:font-bold"/>
            </div>
@@ -34,14 +32,14 @@ const CartItem = ({ product }) => {
           {/* incrice and decrice button */}
         <div className="inline-flex items-center mt-2">
             <button
-                className="bg-white rounded-l border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200" onClick={()=>handleplus(product,id)}>
+                className="bg-gray-100 text-black  rounded-r border  hover:bg-slate-700 hover:text-white active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200" onClick={()=>handleplus(product,id)}>
                <GoPlus />
             </button>
             <div
-                className="bg-gray-100 border-t border-b border-gray-100 text-gray-600 hover:bg-gray-100 inline-flex items-center px-3  select-none">
+                className="bg-white border-t border-b border-gray-100 text-black inline-flex items-center px-3  select-none">
                 {amount}            </div>
             <button
-                className="bg-white rounded-r border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200" onClick={()=>handleminus(product)}>
+                className="bg-gray-100 text-black  rounded-r border  hover:bg-slate-700 hover:text-white active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200" onClick={()=>handleminus(product)}>
                <FiMinus />
             </button>
         </div>

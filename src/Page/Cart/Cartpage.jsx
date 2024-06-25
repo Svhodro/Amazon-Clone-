@@ -12,23 +12,25 @@ function Cartpage() {
     <div className="w-full min-h-screen  ">
       <div class="h-full   pt-20 pb-6 ">
         <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
-          <div class="rounded-lg md:w-2/3 ">
+          <div class="rounded-lg md:w-2/3 gap-2">
             <h1 class="mb-10 text-start text-3xl pl-4 font-bold">
               Shopping Cart
             </h1>
             <hr className="py-3 border-slate-600 " />
             {/* cart part */}
+            <div className="flex gap-2 flex-col ">
             {cart.map((item) => {
               
                 return <CartItem product={item} key={item.id} />;
            
             })}
+            </div>
           </div>
           {/* Show part */}
           <div class="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
             <div class="flex justify-between">
               <p class="text-gray-700 text-base font-bold">Shipping</p>
-              <p class="text-gray-700 hover:underline font-bold" onClick={handleclear}>Clear</p>
+              <p class="text-gray-700 hover:underline font-bold cursor-pointer" onClick={handleclear}>Clear</p>
             </div>
             <hr class="my-4" />
             <div class="flex justify-between">

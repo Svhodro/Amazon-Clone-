@@ -13,6 +13,7 @@ import Private from "./Page/Protected/Private";
 import Nopage from "./Page/Nopage/Nopage";
 import ProductDetails from "./Page/ProDetails/ProductDetails";
 import CartProvider from "./context/CartContext";
+import Signin from "./Page/Login/Signin";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       },
       {
         path: "/Login",
+        element: <Signin />,
+      },
+      {
+        path: "/signup",
         element: <Signup />,
       },
       {

@@ -19,6 +19,7 @@
     "react-multi-carousel": "^2.8.5",
     "react-router-dom": "^6.23.1",
     "react-toastify": "^10.0.5",
+    "sweetalert": "^2.1.2",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
