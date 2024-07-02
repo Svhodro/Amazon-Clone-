@@ -1,6 +1,24 @@
-# Amazon-Clone-Web-App
+# Amazon simple ui clone 
+## Fetarts
+- show product
+- cart product's
+- login system
+## live link : https://trila-real-estate.vercel.app/
+# Project  technology's
+-- Frontend
 
-This Web site create for the education purpose only. 
+- React js
+- Context api
+- React-Dom
+- Tailwind css
+ 
+-- Backend
+  - Firebase authentication
 
-Currently, two official plugins are available:
-- amazon clone 
+
+ # How to run localHost  
+ - clone the repogitory
+ - then open in code editor and open terminal
+ - then run-> npm install
+ - then run-> npm run dev
+  
