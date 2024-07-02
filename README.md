@@ -3,7 +3,7 @@
 - show product
 - cart product's
 - login system
-## live link : https://trila-real-estate.vercel.app/
+## live link : https://amazon-clone-weld-gamma.vercel.app/
 # Project  technology's
 -- Frontend
 
